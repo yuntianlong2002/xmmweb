@@ -252,7 +252,7 @@
 
 
 	// Set the date we're counting down to
-		var countDownDate = new Date("Dec 02, 2017 15:37:25").getTime();
+		var countDownDate = new Date("Jun 01, 2011 19:00:00").getTime();
 
 		// Update the count down every 1 second
 		var x = setInterval(function() {
@@ -261,7 +261,7 @@
 		var now = new Date().getTime();
 
 		// Find the distance between now an the count down date
-		var distance = countDownDate - now;
+		var distance = now - countDownDate;
 
 		// Time calculations for days, hours, minutes and seconds
 		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -279,11 +279,6 @@
 		document.getElementById("minutes").innerHTML = minutes + " <small>minutes</small> ";
 		document.getElementById("seconds").innerHTML = seconds + " <small>seconds</small> ";
 
-		// If the count down is finished, write some text
-		if (distance < 0) {
-		 clearInterval(x);
-		 document.getElementById("demo").innerHTML = "The Wedding Ceremony is Over";
-		}
 		}, 1000);
 
 
